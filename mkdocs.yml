@@ -1,16 +1,37 @@
-site_name: Infrastructure Docs
-site_description: Internal documentation for the Infrastructure team
+site_name: Infrastructure Team Documentation
+site_description: Internal documentation and runbooks for the Infrastructure team
 site_author: Infrastructure Team
 
+# This controls the left-hand navigation
 nav:
   - Home: index.md
   - Onboarding: onboarding.md
   - Patching:
+      - Overview: patching/overview.md
       - Ivanti: patching/ivanti.md
 
+# Theme (Material is popular and looks great out of the box)
 theme:
   name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
 
+# Enable built-in search (Material supports this automatically)
+plugins:
+  - search
+
+# Helpful markdown behaviors (table of contents, better code fences, etc.)
 markdown_extensions:
   - toc:
       permalink: true
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
