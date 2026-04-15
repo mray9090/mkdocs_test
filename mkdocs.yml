@@ -1,0 +1,16 @@
+site_name: Infrastructure Docs
+site_description: Internal documentation for the Infrastructure team
+site_author: Infrastructure Team
+
+nav:
+  - Home: index.md
+  - Onboarding: onboarding.md
+  - Patching:
+      - Ivanti: patching/ivanti.md
+
+theme:
+  name: material
+
+markdown_extensions:
+  - toc:
+      permalink: true
